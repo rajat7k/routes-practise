@@ -10,7 +10,6 @@ import UpdateProfile from './components/UpdateProfile';
 import SubcriptionComponent from './components/ProfilePage/Subscription';
 import Profile from './components/ProfilePage/Profile';
 import PublicRoute from './components/PublicRoute';
-// import { useState } from 'react';
 
 function App() {
 
