@@ -1,10 +1,12 @@
 
 import React, { useState } from 'react'
-import { useNavigate } from 'react-router-dom'
+import { useLocation, useNavigate } from 'react-router-dom'
 
-export default function LoginPage() {
+export default function LoginPage(props) {
 
     const navigate = useNavigate()
+    const {state}=useLocation()
+    // const {data}=state;
 
     const [username, setUserName] = useState('')
     const [password, setPassword] = useState('')
@@ -19,8 +21,14 @@ export default function LoginPage() {
 
     function handleLoginBtnClick() {
         localStorage.setItem('token', 'success');
-        navigate('/');
+        if(state!=null){
+            navigate(state);
+        }
+        else
+            navigate('/');
     }
+    
+
 
     return (
         <div className="login-page">

@@ -1,7 +1,23 @@
 import React from 'react'
+import { Link, useNavigate } from 'react-router-dom';
 
 export default function UpdateProfile() {
+  const navigate = useNavigate();
+
+  function handleLogoutBtnClick() {
+    localStorage.removeItem('token');
+    navigate('/login/phone-number')
+  }
+
+
   return (
-    <div>UpdateProfile</div>
+    <div>
+      <h1>Upadate Profile</h1>
+      <Link to='/profile-details' >
+        <button>Go back</button>
+      </Link>
+      <br />
+      <button onClick={handleLogoutBtnClick} >Logout</button>
+    </div>
   )
 }

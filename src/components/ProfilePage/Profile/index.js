@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link, useNavigate} from 'react-router-dom';
 
-export default function ProfileAppDetail() {
+export default function Profile() {
   const navigate = useNavigate();
 
   function handleLogoutBtnClick() {
@@ -12,7 +12,7 @@ export default function ProfileAppDetail() {
 
   return (
     <div>
-      <h1>Profile  App Details</h1>
+      <h1> Profile</h1>
       <Link to='/profile-details' >
             <button >Go back</button>
             </Link>
@@ -21,4 +21,3 @@ export default function ProfileAppDetail() {
     </div>
   )
 }
-
