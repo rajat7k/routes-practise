@@ -1,5 +1,6 @@
 import React from 'react'
-import { Link, useNavigate } from 'react-router-dom'
+import {  useNavigate } from 'react-router-dom'
+import LinkWithQuery from '../LinkWithQuery';
 
 export default function ProfilePage() {
     const navigate = useNavigate();
@@ -13,16 +14,16 @@ export default function ProfilePage() {
     return (
         <div className="profile-page">
             <h1>Profile Page</h1>
-            <Link to='/' ><button >Go back</button></Link>
+            <LinkWithQuery to='/' ><button >Go back</button></LinkWithQuery>
             <div className="btn-container">
 
-                <Link to='/profile-details/app-details' > <button>App Details</button></Link>
+                <LinkWithQuery to='/profile-details/app-details' > <button>App Details</button></LinkWithQuery>
                 <br />
-                <Link to='/profile-details/bank-details'> <button>Bank Details</button> </Link>
+                <LinkWithQuery to='/profile-details/bank-details'> <button>Bank Details</button> </LinkWithQuery>
                 <br />
-                <Link to='/profile-details/subscription'> <button>Subscription</button> </Link>
+                <LinkWithQuery to='/profile-details/subscription'> <button>Subscription</button> </LinkWithQuery>
                 <br />
-                <Link to='/profile-details/profile'> <button>Profile</button> </Link>
+                <LinkWithQuery to='/profile-details/profile'> <button>Profile</button> </LinkWithQuery>
                 <br />
                 <button onClick={handleLogoutBtnClick} >Logout</button>
             </div>

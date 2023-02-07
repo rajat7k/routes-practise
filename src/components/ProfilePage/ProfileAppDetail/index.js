@@ -1,5 +1,6 @@
 import React from 'react'
-import { Link, useNavigate} from 'react-router-dom';
+import { useNavigate} from 'react-router-dom';
+import LinkWithQuery from '../../LinkWithQuery';
 
 export default function ProfileAppDetail() {
   const navigate = useNavigate();
@@ -13,9 +14,9 @@ export default function ProfileAppDetail() {
   return (
     <div>
       <h1>Profile  App Details</h1>
-      <Link to='/profile-details' >
+      <LinkWithQuery to='/profile-details' >
             <button >Go back</button>
-            </Link>
+            </LinkWithQuery>
             <br />
       <button onClick={handleLogoutBtnClick} >Logout</button>
     </div>

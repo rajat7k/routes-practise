@@ -1,5 +1,6 @@
 import React from 'react'
-import { Link, useNavigate } from 'react-router-dom'
+import {  useNavigate } from 'react-router-dom'
+import LinkWithQuery from '../LinkWithQuery';
 
 export default function HomePage() {
 
@@ -16,9 +17,10 @@ export default function HomePage() {
             <h1>Home Page</h1>
 
             <div className="buttons-container">
-                <Link to='/profile-details' > <button >Profile</button></Link>
+                <LinkWithQuery to='/profile-details' > <button >Profile</button></LinkWithQuery>
+
                 <br />
-                <Link to='/profile-update'> <button> Update Profile</button>  </Link>
+                <LinkWithQuery to='/profile-update'> <button> Update Profile</button>  </LinkWithQuery>
                 <br/>
                 <button onClick={handleLogoutBtnClick} >Logout</button>
             </div>

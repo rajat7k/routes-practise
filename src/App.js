@@ -22,7 +22,6 @@ function App() {
      <Route path='/' element={<ProtectedRoute path='/' ><HomePage/></ProtectedRoute>}  />
 
      <Route path='/login/phone-number'  element={ <PublicRoute><LoginPage/> </PublicRoute> } />
-     {/* <Route path='/login/phone-number'  element={ <LoginPage/>  } /> */}
 
      <Route path='/profile-details' element={<ProtectedRoute path='/profile-details'> <ProfilePage/> </ProtectedRoute>} />
 
